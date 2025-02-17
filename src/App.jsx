@@ -21,6 +21,8 @@ function App() {
         })
     }
 
+    const validDuration = investment.duration > 0;
+
 
   return <>
     <Header />
@@ -28,9 +30,8 @@ function App() {
       onChange={handleChange}
       userInput={investment}
     />
-    <Results 
-      input={investment}
-    />
+    {validDuration && <Results input={investment} />}
+    {!validDuration && <p className="center">Please enter duration greater than 0</p>}
   </>
 }
 
