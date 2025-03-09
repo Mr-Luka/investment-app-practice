@@ -1,45 +1,25 @@
 
-export default function UserInput({userInput, changeOn}){
+export default function UserInput(){
     return (
         <section id="user-input">
             <div className="input-group">
                 <p>
                     <label>Initial Investment</label>
-                    <input 
-                        type="number" 
-                        required 
-                        onChange={(e)=> changeOn('initialInvestment', e.target.value)}
-                        value={userInput.initialInvestment}
-                    />
+                    <input type="number" required />
                 </p>
                 <p>
                     <label>Annual Investment</label>
-                    <input 
-                        type="number" 
-                        required 
-                        onChange={(e)=> changeOn('annualInvestment', e.target.value)}
-                        value={userInput.annualInvestment}
-                    />
+                    <input type="number" required />
                 </p>
             </div>
              <div className="input-group">
                 <p>
                     <label>Expected Return</label>
-                    <input 
-                        type="number" 
-                        required 
-                        onChange={(e)=> changeOn('expectedReturn', e.target.value)}
-                        value={userInput.expectedReturn}
-                    />
+                    <input type="number" required />
                 </p>
                 <p>
                     <label>Duration</label>
-                    <input 
-                        type="number" 
-                        required 
-                        onChange={(e)=> changeOn('duration', e.target.value)}
-                        value={userInput.duration}
-                    />
+                    <input type="number" required />
                 </p>
             </div>
   
