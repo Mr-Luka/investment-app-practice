@@ -12,6 +12,8 @@ function App() {
         duration: 10
     });
 
+    const validDuration = investment.duration > 0;
+
     function handleChange(investmentType, newNumber){
         setInvestment(prevInvestment => {
             return {
@@ -27,9 +29,8 @@ function App() {
       onChange={handleChange}
       investment={investment}
     />
-    <Results 
-      input={investment}
-    />
+    {validDuration ? <Results input={investment} /> : <p className='center'>Please enter duration greated than 0</p>}
+
   </>
 }
 
